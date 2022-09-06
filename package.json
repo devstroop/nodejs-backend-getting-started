@@ -1,13 +1,13 @@
 {
-  "name": "getting-started",
+  "name": "nodejs-backend-getting-started",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
-    "start": "node ./server/server.js",
-    "dev": "nodemon ./server/server.js"
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
   },
-  "author": "AcidMux",
+  "author": "Akash Shah",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
