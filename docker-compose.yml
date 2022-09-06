@@ -1,10 +1,9 @@
-version: '3.4'
+version: '3.9'
 
 services:
-  server:
-    image: ${DOCKER_REGISTRY-}server
+  web:
+    image: nodejs-backend-getting-started
     build:
       context: .
-      dockerfile: 'Dockerfile'
     ports:
       - 3000
