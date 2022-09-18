@@ -4,9 +4,8 @@ const mongoose = require('mongoose');
 const authRouter = require('./routers/auth.router');
 const adminRouter = require('./routers/admin.router');
 
-const HOST = process.env.HOST || '0.0.0.0';
 const PORT = process.env.PORT || 3000;
-const DB_URI = process.env.MONGODB_URI || 'mongodb+srv://root:9qawwvky4T0bPqhE@cluster0.3gu8lkk.mongodb.net/?retryWrites=true&w=majority';
+const DB_URI = process.env.MONGODB_URI;
 
 const app = express();
 
@@ -23,6 +22,6 @@ mongoose
         console.log(e);
     });
 
-app.listen(PORT, HOST, () => {
-    console.log(`Started at port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Started at internal port ${PORT}`);
 });
